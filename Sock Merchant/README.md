@@ -1,40 +1,53 @@
 There is a large pile of socks that must be paired by color. Given an array of integers representing the color of each sock, determine how many pairs of socks with matching colors there are.
 
-Example
+Example:
+
+n = 7
+
+ar = [1,2,1,2,1,3,2]
 
 
-There is one pair of color  and one of color . There are three odd socks left, one of each color. The number of pairs is .
+There is one pair of color 1 and one of color 2. There are three odd socks left, one of each color. The number of pairs is 2.
 
-Function Description
+Function Description:
 
 Complete the sockMerchant function in the editor below.
 
 sockMerchant has the following parameter(s):
 
-int n: the number of socks in the pile
-int ar[n]: the colors of each sock
-Returns
+* int n: the number of socks in the pile
+* int ar[n]: the colors of each sock
 
-int: the number of pairs
-Input Format
+Returns:
 
-The first line contains an integer , the number of socks represented in .
-The second line contains  space-separated integers, , the colors of the socks in the pile.
+* int: the number of pairs
 
-Constraints
+Input Format:
 
- where 
-Sample Input
+The first line contains an integer n, the number of socks represented in ar.
+The second line contains n space-separated integers, ar[i], the colors of the socks in the pile.
 
-STDIN                       Function
+Constraints:
+* 1 <= n <= 100
+* 1 <= ar[i] <= 100 where 0 <= i < n
+
+Sample Input:
+
+STDIN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                      Function
 -----                       --------
-9                           n = 9
-10 20 20 10 10 30 50 10 20  ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
-Sample Output
+9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                            n = 9 \
+10 20 20 10 10 30 50 10 20  &nbsp;&nbsp;&nbsp;ar = [10, 20, 20, 10, 10, 30, 50, 10, 20] \
+
+Sample Output:
 
 3
-Explanation
 
-sock.png
+Explanation: 
+
+(Paired)\
+10--10&nbsp;&nbsp;&nbsp;  10--10&nbsp;&nbsp;&nbsp; 20--20
+
+(No pairs)\
+20&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; 50
 
 There are three pairs of socks.
