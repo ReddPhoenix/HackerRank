@@ -53,7 +53,7 @@ function fizzBuzz(n) {
             else if (i % 5 === 0) {
                 console.log('Buzz');
             }
-            // Return n if not divisible by 3 or 5
+            // Return i if not divisible by 3 or 5
             else {
                 console.log(i);
             }
