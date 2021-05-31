@@ -13,5 +13,8 @@ SELECT * FROM CITY WHERE ID = 1661;
 
 
 Your Output (stdout)
+1661 Sayama JPN Saitama 162472
 
+
+Expected Output
 1661 Sayama JPN Saitama 162472
