@@ -22,7 +22,7 @@ SELECT CITY FROM STATION WHERE CITY LIKE 'a%'
     OR CITY LIKE 'u%'; 
 
 
--- Your Output (stdout)
+-- Your Output (stdout) / Expected Output
 -- Arlington
 -- Albany
 -- Upperco
