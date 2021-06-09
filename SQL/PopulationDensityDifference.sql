@@ -13,3 +13,8 @@
 --     POPULATION   |      NUMBER
 
 
+SELECT (MAX(POPULATION) - MIN(POPULATION)) FROM CITY;
+
+
+-- Your Output (stdout) / Expected Outcome
+-- 4695354
