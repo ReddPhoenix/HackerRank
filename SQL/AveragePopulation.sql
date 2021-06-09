@@ -14,3 +14,8 @@
 --     POPULATION   |      NUMBER
 
 
+SELECT ROUND(AVG(POPULATION), 0) FROM CITY;
+
+
+-- Your Output (stdout) / Expected Outcome
+-- 454250
