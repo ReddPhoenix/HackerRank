@@ -1,11 +1,11 @@
-Query the following two values from the STATION table:
+-- Query the following two values from the STATION table:
 
-1. The sum of all values in LAT_N rounded to a scale of 2 decimal places.
-2. The sum of all values in LONG_W rounded to a scale of 2 decimal places.
+-- 1. The sum of all values in LAT_N rounded to a scale of 2 decimal places.
+-- 2. The sum of all values in LONG_W rounded to a scale of 2 decimal places.
 
-Input Format
+-- Input Format
 
-The STATION table is described as follows:
+-- The STATION table is described as follows:
 
 -- FIELD        TYPE
 -- ID           NUMBER
@@ -14,13 +14,21 @@ The STATION table is described as follows:
 -- LAT_N        NUMBER
 -- LAT_W        NUMBER
 
-where LAT_N is the northern latitude and LONG_W is the western longitude.
+-- where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 
-Output Format
+-- Output Format
 
-Your results must be in the form:
+-- Your results must be in the form:
 
-lat lon
+-- lat lon
 
-where lat is the sum of all values in LAT_N and lon is the sum of all values in LONG_W. Both results must be rounded to a scale of 2 decimal places.
+-- where lat is the sum of all values in LAT_N and lon is the sum of all values in LONG_W. Both results must be rounded to a scale of 2 decimal places.
+
+
+
+SELECT ROUND(SUM(LAT_N), 2) , ROUND(SUM(LONG_W), 2) FROM STATION;
+
+
+-- Your Output (stdout) / Expected Output
+-- 42850.04 47381.48
