@@ -1,32 +1,58 @@
-Samantha was tasked with calculating the average monthly salaries for all employees in the EMPLOYEES table, but did not realize her keyboard's  key was broken until after completing the calculation. She wants your help finding the difference between her miscalculation (using salaries with any zeros removed), and the actual average salary.
+-- Samantha was tasked with calculating the average monthly salaries for all employees in the EMPLOYEES table, but did not realize her keyboard's 0 key was broken until after completing the calculation. She wants your help finding the difference between her miscalculation (using salaries with any zeros removed), and the actual average salary.
 
-Write a query calculating the amount of error (i.e.:  average monthly salaries), and round it up to the next integer.
+-- Write a query calculating the amount of error (i.e.: actual - miscalculated average monthly salaries), and round it up to the next integer.
 
-Input Format
+-- Input Format
 
-The EMPLOYEES table is described as follows:
+-- The EMPLOYEES table is described as follows:
 
-
-
-Note: Salary is per month.
-
-Constraints
-
-.
-
-Sample Input
+-- --      COLUMN      |       TYPE
+-- --------------------------------------
+-- --        ID        |     INTEGER
+-- --       NAME       |     STRING
+-- --      SALARY      |     INTEGER
 
 
 
-Sample Output
+-- Note: Salary is per month.
 
-2061
-Explanation
+-- Constraints
 
-The table below shows the salaries without zeros as they were entered by Samantha:
+-- 1000 < Salary < 10^5.
+
+-- Sample Input
+
+-- --  ID  |      Name        |  Salary
+-- --------------------------------------
+-- --  1   |    Kristeen      |   1420
+-- --  2   |    Ashley        |   2006
+-- --  3   |    Julia         |   2210
+-- --  4   |    Maria         |   3000
 
 
+-- Sample Output
 
-Samantha computes an average salary of . The actual average salary is .
+-- 2061
 
-The resulting error between the two calculations is . Since it is equal to the integer , it does not get rounded up.
+
+-- Explanation
+
+-- The table below shows the salaries without zeros as they were entered by Samantha:
+
+-- --  ID  |      Name        |  Salary
+-- --------------------------------------
+-- --  1   |    Kristeen      |   142
+-- --  2   |    Ashley        |   26
+-- --  3   |    Julia         |   221
+-- --  4   |    Maria         |   3
+
+
+-- Samantha computes an average salary of 98.00 . The actual average salary is 2159.00.
+
+-- The resulting error between the two calculations is 2159.00 - 98.00 = 2061.00. Since it is equal to the integer 2061 , it does not get rounded up.
+
+SELECT CEIL(AVG(SALARY) - AVG(REPLACE(SALARY, 0, ''))) FROM EMPLOYEES;
+
+
+-- Your Output (stdout) / Expected Output
+-- 2253
