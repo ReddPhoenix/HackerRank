@@ -16,3 +16,8 @@
 -- The CITY table is described as follows: 
 
 
+SELECT SUM(POPULATION) FROM CITY WHERE COUNTRYCODE = 'JPN';
+
+
+-- Your Output (stdout) / Expected Output
+-- 879196
