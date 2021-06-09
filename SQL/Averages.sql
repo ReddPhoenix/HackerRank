@@ -13,3 +13,13 @@
 --     POPULATION   |      NUMBER
 
 
+SELECT AVG(POPULATION) FROM CITY WHERE DISTRICT = 'California';
+
+
+-- Your Output (stdout)
+-- 113000.667
+
+
+-- Expected Output
+
+-- 113000.667
