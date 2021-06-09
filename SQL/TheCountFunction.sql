@@ -14,3 +14,11 @@ The CITY table is described as follows:
 --     POPULATION   |      NUMBER
 
 
+SELECT COUNT(POPULATION) FROM CITY WHERE POPULATION > 100000;
+
+-- Your Output (stdout)
+-- 6
+-- Expected Output
+
+-- Download
+-- 6
