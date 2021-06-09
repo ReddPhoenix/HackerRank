@@ -59,3 +59,8 @@
 -- The maximum earnings value is 69952. The only employee with earnings =69952 is Kimberly, so we print the maximum earnings value (69952) and a count of the number of employees who have earned $69952 (which is 1 ) as two space-separated values.
 
 
+SELECT months * salary as earnings, COUNT(*) FROM Employee GROUP BY earnings DESC LIMIT 1;
+
+
+-- Your Output (stdout) / Expected Output
+-- 108064 7 
