@@ -37,3 +37,46 @@
 -- Values in the tuple (20, 20, 23) form an Isosceles triangle, because A = B .
 -- Values in the tuple (20, 20, 20) form an Equilateral triangle, because A = B = C . Values in the tuple  (20, 21, 22) form a Scalene triangle, because A != B != C .
 -- Values in the tuple (13, 14, 30) cannot form a triangle because the combined value of sides A and B is not larger than that of side C.
+
+
+SELECT 
+    CASE
+    WHEN A + B <= C OR A + C <= B OR B + C <= A THEN 'Not A Triangle'
+    WHEN A = B AND B = C THEN 'Equilateral'
+    WHEN A = B OR B = C OR A =C THEN 'Isosceles'
+    WHEN A != B AND A != C AND B != C THEN 'Scalene'
+    END 
+FROM TRIANGLES;
+
+-- 10 10 10	EQUILATERAL 
+-- 11 11 11	EQUILATERAL 
+-- 30 32 30	ISOSCELES   
+-- 40 40 40	EQUILATERAL 
+-- 20 20 21	ISOSCELES   
+-- 21 21 21	EQUILATERAL 
+-- 20 22 21	SCALENE     
+-- 20 20 40	ISOSCELES   
+-- 20 22 21	SCALENE	    
+-- 30 32 41	SCALENE	    
+-- 50 22 51	SCALENE	    
+-- 20 12 61	NOT A TRIANGLE 
+-- 20 22 50	NOT A TRIANGLE 
+-- 50 52 51	SCALENE	    
+-- 80 80 80	EQUILATERAL 
+
+-- Your Output (stdout) / Expected Output
+-- Equilateral
+-- Equilateral
+-- Isosceles
+-- Equilateral
+-- Isosceles
+-- Equilateral
+-- Scalene
+-- Not A Triangle
+-- Scalene
+-- Scalene
+-- Scalene
+-- Not A Triangle
+-- Not A Triangle
+-- Scalene
+-- Equilateral
