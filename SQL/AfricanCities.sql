@@ -36,3 +36,16 @@
 --  HEADOFSTATE     |    VARCHAR2(32)
 --  CAPITAL         |    VARCHAR2(4)   
 --  CODE2           |    VARCHAR2(2)  
+
+
+SELECT CITY.NAME FROM CITY JOIN COUNTRY ON CITY.COUNTRYCODE = COUNTRY.CODE WHERE COUNTRY.CONTINENT = 'Africa';
+
+-- Your Output (stdout) / Expected Output
+-- Qina
+-- Warraq al-Arab
+-- Kempton Park
+-- Alberton
+-- Klerksdorp
+-- Uitenhage
+-- Brakpan
+-- Libreville
