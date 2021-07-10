@@ -48,3 +48,41 @@
 // * perimeter = 2 * Pi * r = 16.33628179866624
 
 // We then print area as our first line of output and perimeter as our second line of output.
+
+'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', inputStdin => {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', _ => {
+    inputString = inputString.trim().split('\n').map(string => {
+        return string.trim();
+    });
+    
+    main();    
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+function main() {
+    // Write your code here. Read input using 'readLine()' and print output using 'console.log()'.
+    const PI = Math.PI;
+    let r = readLine();
+     
+    // Print the area of the circle:
+    let area = PI * r * r;
+    console.log(area);
+    
+    // Print the perimeter of the circle:
+    let perimeter = 2 * PI * r;
+    console.log(perimeter);
+    try {    
