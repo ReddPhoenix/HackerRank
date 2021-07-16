@@ -57,3 +57,31 @@
 // Explanation 0
 
 // The first character of string s = adfgt is a. Because the given criteria stipulate that we print A any time the first character is in {a, e, i, o, u}, we return A as our answer.
+
+function getLetter(s) {
+    let letter;
+    
+    // Write your code here
+    
+    let arr = s.split('');
+    // console.log(arr);
+    
+    
+    switch (true) {
+        
+        case (arr[0] === 'a' || arr[0] === 'e' || arr[0] === 'i' || arr[0] === 'o' || arr[0] ==='u'):
+            letter = 'A';
+            break;
+        case (arr[0] === 'b' || arr[0] === 'c' || arr[0] === 'd' || arr[0] === 'f' || arr[0] === 'g'):
+            letter = 'B';
+            break;
+        case (arr[0] === 'h' || arr[0] === 'j' || arr[0] === 'k' || arr[0] === 'l' || arr[0] === 'm'):
+            letter = 'C';
+            break;
+        case (arr[0] === 'n' || arr[0] === 'p' || arr[0] === 'q' || arr[0] === 'r' || arr[0] === 's' || arr[0] === 't' || arr[0] === 'v' || arr[0] === 'w' || arr[0] === 'x' || arr[0] === 'y' || arr[0] === 'z'):
+            letter = 'D';
+            break;
+    }
+    
+    return letter;
+}
