@@ -89,3 +89,10 @@ function modifyArray(nums) {
     return nums;
 }
 
+// arrow solution
+function modifyArray(nums) {
+    let integer = num => num = (num % 2 == 0) ? num * 2 : num * 3;
+    let arr = nums.map(integer);
+    
+    return arr;
+}
